@@ -1,0 +1,31 @@
+# Ignorer tout le contenu de bin, build, input et output
+bin/*
+build/*
+input/*
+output/*
+
+# Mais garder ces dossiers via un fichier vide
+!bin/.gitkeep
+!build/.gitkeep
+!input/.gitkeep
+!output/.gitkeep
+
+# Ignorer tous les fichiers .txt
+*.txt
+*.o
+
+# Ignorer les fichiers sans extension (potentiel executable linux)
+# On commence par ignorer tous les fichiers, sauf les dossiers
+# Ensuite, on réautorise les fichiers avec extensions
+
+# Ignore tous les fichiers sans extension
+*
+
+#sauf le makefile
+!Makefile
+
+# Mais ne pas ignorer les dossiers (pour avoir le input et output mais ils sera toujours vide)
+!*/
+
+# pas ignorer les fichiers qui ont une extension
+!*.*
